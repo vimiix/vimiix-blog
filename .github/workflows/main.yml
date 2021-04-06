@@ -26,9 +26,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v2.5.0
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           external_repository: vimiix/vimiix.github.io
           publish_dir: ./public
           cname: vimiix.com
-          # github page分支
-          publish_branch: gh-pages
