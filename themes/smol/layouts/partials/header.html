@@ -1,0 +1,16 @@
+<header>
+	{{ strings.Repeat ( .Site.Title | len | add 6 ) "=" }}<br>
+	== {{ .Site.Title }} ==<br>
+	{{ strings.Repeat ( .Site.Title | len | add 6 ) "=" }}
+	<div style="float: right;">{{ .Site.Params.subtitle }}</div><br>
+	<p>
+	<nav>
+		<a href="{{ .Site.BaseURL }}"><b>首页</b></a>.
+		{{ with .Site.Menus.main }}
+		{{ range . }}
+		<a href="{{ .URL | relURL }}"><b>{{ .Name }}</b></a>.
+		{{ end }}
+	</nav>
+	</p>
+	{{ end }}
+</header>

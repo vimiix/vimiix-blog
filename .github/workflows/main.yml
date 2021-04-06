@@ -1,0 +1,34 @@
+name: ci-gh-pages
+
+on:
+  push:
+    branches:
+      # hugo源码分支
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      # 如果使用了git submodules
+      # with:
+      #   submodules: true
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.81.0'
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v2.5.0
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          external_repository: vimiix/vimiix.github.io
+          publish_dir: ./public
+          cname: vimiix.com
+          # github page分支
+          publish_branch: gh-pages
