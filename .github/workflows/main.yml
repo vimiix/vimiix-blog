@@ -1,4 +1,4 @@
-name: ci-gh-pages
+name: ci-ghpages
 
 on:
   push:
@@ -24,9 +24,11 @@ jobs:
         run: hugo --minify
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v2.5.0
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           external_repository: vimiix/vimiix.github.io
           publish_dir: ./public
           cname: vimiix.com
+          # github page分支
+          publish_branch: gh-pages
