@@ -2,7 +2,6 @@ baseURL = "https://vimiix.com/"
 languageCode = "cn-zh"
 title = "Hi, I'm Vimiix"
 theme = "smol"
-disqusShortname = "vimiix-blog"
 copyright = "Copyright (c) 2017-2021, Vimiix Yao; All rights reserved"
 
 # Parameters
@@ -36,13 +35,18 @@ copyright = "Copyright (c) 2017-2021, Vimiix Yao; All rights reserved"
   [[menu.main]]
         identifier = "friends"
         name="友链"
-        url="/friends"
+        url="/friends/"
         weight="4"
   [[menu.main]]
         identifier = "about"
         name="关于"
-        url="/about"
+        url="/about/"
         weight="5"
+  [[menu.main]]
+        identifier = "rss"
+        name="RSS"
+        url="/index.xml"
+        weight="6"
 
 # Footer
   [[menu.footer]]

@@ -1,5 +1,5 @@
 ---
-title: ''
+title: 'About'
 date: 2017-04-06T14:45:57+08:00
 ---
 
@@ -24,7 +24,7 @@ Hi，欢迎到访我的网站，下面是一些关于我和这个网站的一些
 
 ## 关于本站
 
-基于 [Hugo](https://gohugo.io/) 框架搭建，主题采用 [smol](https://github.com/colorchestra/smol)
+基于 [Hugo](https://gohugo.io/) 框架搭建，主题基于 [smol](https://github.com/colorchestra/smol) 修改
 
 ChangeLog:
 
