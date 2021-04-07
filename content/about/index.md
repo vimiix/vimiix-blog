@@ -29,7 +29,7 @@ Hi，欢迎到访我的网站，下面是一些关于我和这个网站的一些
 ChangeLog:
 
 - 2021-04 使用 Hugo 重新整理
-- 2019-06 迁移到 [Lyanna](https://github.com/dongweiming/lyanna) 框架
+- 2019-06 迁移到 [Lyanna](https://github.com/dongweiming/lyanna) 框架，访问旧址：http://lyanna.vimiix.com/
 - 2017-09 改用 [Veripress](https://github.com/verilab/veripress) 框架
 - 2017-04 基于 [Hexo](https://hexo.io/) 框架，[Icarus](https://github.com/ppoffice/hexo-theme-icarus) 主题建立
 
