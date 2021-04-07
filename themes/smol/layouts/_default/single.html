@@ -6,6 +6,7 @@
 		{{ range .Params.tags }}
 		<a href="{{ " /tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
 		{{ end }}
+		| <a class='disqus-comment-count' href="{{ .Permalink }}#disqus_thread"></a>
 
 		<div>
 			{{ .Content }}
@@ -27,4 +28,5 @@
 		})();
 	</script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//vimiix-blog.disqus.com/count.js" async></script>
 {{ end }}
