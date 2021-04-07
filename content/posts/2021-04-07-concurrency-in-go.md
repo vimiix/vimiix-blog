@@ -1,8 +1,11 @@
 ---
 title: 'Golang的并行模式实践'
-date: 2021-04-07 18:05:48
+date: 2021-04-07 18:15:48
 categories: 'golang'
-tags: ['concurrency', 'golang', 'goroutine']
+tags:
+  - 'concurrency'
+  - 'golang'
+  - 'goroutine'
 ---
 
 ## Goroutine

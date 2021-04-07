@@ -3,6 +3,7 @@ languageCode = "cn-zh"
 title = "Hi, I'm Vimiix"
 theme = "smol"
 copyright = "Copyright (c) 2017-2021, Vimiix Yao; All rights reserved"
+buildFuture = true
 
 # Parameters
 [params]
