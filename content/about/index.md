@@ -7,14 +7,14 @@ Hi，欢迎到访我的网站，下面是一些关于我和这个网站的一些
 
 ## 关于我
 
-目前在 [Enmotech](https://enmotech.com/) 从事数据库相关的产品后端研发工作，主要使用的开发语言是: Python 和 Golang
+目前在 [云和恩墨](https://enmotech.com/) 从事数据库相关的产品后端研发工作，主要使用的开发语言是: Python 和 Golang
 
 受雇过的公司：
 
-- 2021~ [Enmotech](https://enmotech.com)
-- 2018~2020 [Douban](https://www.douban.com)
-- 2017~2018 [Enmotech](https://enmotech.com)
-- 2015~2017 从事过蓝牙相关的嵌入式开发，还在 [CSDN](https://www.csdn.net/) 做过产品运营
+- 2021~至今 [西安][云和恩墨](https://enmotech.com)
+- 2018~2020 [北京][豆瓣](https://www.douban.com)
+- 2017~2018 [北京][云和恩墨](https://enmotech.com)
+- 2015~2017 [上海] 从事过蓝牙相关的嵌入式开发，还在 [CSDN](https://www.csdn.net/) 做过产品运营
 
 ## 联系方式
 
