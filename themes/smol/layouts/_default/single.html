@@ -6,7 +6,7 @@
 		{{ range .Params.tags }}
 		<a href="{{ " /tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
 		{{ end }}
-		| <a class='disqus-comment-count' href="{{ .Permalink }}#disqus_thread"></a>
+		| <a class='disqus-comment-count' href="{{ .RelPermalink }}#disqus_thread"></a>
 
 		<div>
 			{{ .Content }}
