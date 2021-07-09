@@ -51,7 +51,7 @@ openGauss 在2020年6月30日开放源代码，代码托管在 gitee 上。
 
 ### 完整架构图
 
-<img src="https://static.vimiix.com/upic/2021-07-08/WeChat665cbcb9d30440234880c049693b01ed.png" alt="完整架构图" style="zoom:67%;" />
+![](https://static.vimiix.com/upic/2021-07-08/WeChat665cbcb9d30440234880c049693b01ed.png)
 
 ## py-opengauss 库
 
@@ -98,7 +98,7 @@ def dbapi(cls):
 
 此时还存在另外一个问题，我们在业务层创建 engine 时传入的连接字符串假如是多IP形式的，SQLAlchemy 内部会通过一个固定的[正则表达式](https://github.com/sqlalchemy/sqlalchemy/blob/990069b2e8627b7c7c649d1198390ec728b43089/lib/sqlalchemy/engine/url.py#L700)来匹配 `user`, `password`, `host`, `port`,`db` 以及 `query` 。但是对于多IP的字符串，匹配出来以后仅会匹配到第一个 `host` 部分，剩余部分被匹配到了 `port` 部分，类似下面这样：
 
-<img src="https://static.vimiix.com/upic/2021-07-08/WeChat8b3e7a354445dda961402c8102d1a308.png" style="zoom:50%;" />
+![](https://static.vimiix.com/upic/2021-07-08/WeChat8b3e7a354445dda961402c8102d1a308.png)
 
 这样的话，对于 port 字段进行 `int(port)` 转换整型的时候，必然会报错。
 
@@ -140,7 +140,7 @@ pip install py-opengauss==1.3.6
 - 通过源码安装
 
 ```bash
-git clone -b for-orm https://github.com/vimiix/py-opengauss.git
+git clone https://github.com/vimiix/py-opengauss.git
 cd py-opengauss
 python3 setup.py install
 ```
