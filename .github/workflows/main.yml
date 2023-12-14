@@ -67,5 +67,5 @@ jobs:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           external_repository: vimiix/vimiix.github.io
           publish_dir: ./public
-          cname: www.vimiix.com
+          cname: vimiix.com
           publish_branch: gh-pages
