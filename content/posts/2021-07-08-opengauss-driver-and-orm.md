@@ -10,7 +10,7 @@ tags:
 
 ### 前置声明
 
->  由于 [openGauss](https://opengauss.org/zh/) 数据库本身也开源不久，所以周边基础设施也正处于遍地开花的阶段，所以本文不保证长期的时效性，仅针对现阶段的问题，提出一种解决方案。
+> 由于 [openGauss](https://opengauss.org/zh/) 数据库本身也开源不久，所以周边基础设施也正处于遍地开花的阶段，所以本文不保证长期的时效性，仅针对现阶段的问题，提出一种解决方案。
 
 ## openGauss 介绍
 
@@ -20,9 +20,11 @@ openGauss 在2020年6月30日开放源代码，代码托管在 gitee 上。
 
 目前我所在公司也主要是做数据库方面的事情，且也基于 openGauss 内核研发了一款商业版的数据库 [MogDB](https://enmotech.com/products/MogDB)，感兴趣的也可以去了解一下。
 
+<!--more-->
+
 ## 背景
 
-针对 openGauss 的基础设施不完善，我之前基于 [py-postgresql](https://github.com/python-postgres/fe) 1.3.0 版本，开发了 openGauss 的 python 驱动，并提交到了 openGauss 官方仓库：https://gitee.com/opengauss/openGauss-connector-python-pyog
+针对 openGauss 的基础设施不完善，我之前基于 [py-postgresql](https://github.com/python-postgres/fe) 1.3.0 版本，开发了 openGauss 的 python 驱动，并提交到了 openGauss 官方仓库：<https://gitee.com/opengauss/openGauss-connector-python-pyog>
 
 该驱动适用于不使用 ORM，以SQL形式交互的 python 程序。
 
@@ -57,7 +59,7 @@ openGauss 在2020年6月30日开放源代码，代码托管在 gitee 上。
 
 第一个问题就是要开发一个 openGauss 的驱动，我们上面提到我之前基于 [py-postgresql](https://github.com/python-postgres/fe) 1.3.0 开发了一个驱动，但是当时仅支持了 openGauss 的连接和SQL交互，现在需要基于目前的需求进行开发。
 
-> 代码目前已经发布到 github 上，源码地址：https://github.com/vimiix/py-opengauss
+> 代码目前已经发布到 github 上，源码地址：<https://github.com/vimiix/py-opengauss>
 >
 > 包已经推送到 pypi 上，最新版本 1.3.6
 
@@ -65,9 +67,9 @@ openGauss 在2020年6月30日开放源代码，代码托管在 gitee 上。
 
 所以我们需要做的是如何在接口上支持多IP。
 
-为了减少对于现有代码的侵入，我修改了 dbapi20 模块中 [ `connect` ](https://github.com/vimiix/py-opengauss/blob/6cb1b6ba46a9ad86f091f5b397454dac82ed622e/py_opengauss/driver/dbapi20.py#L416) 函数，上层需要通过 `host` 字段将IP部分（包含所有主机和端口号），传递进来进行处理。
+为了减少对于现有代码的侵入，我修改了 dbapi20 模块中 [`connect`](https://github.com/vimiix/py-opengauss/blob/6cb1b6ba46a9ad86f091f5b397454dac82ed622e/py_opengauss/driver/dbapi20.py#L416) 函数，上层需要通过 `host` 字段将IP部分（包含所有主机和端口号），传递进来进行处理。
 
-例如： `{'host': 'host1:5432,host2:6432'}` 
+例如： `{'host': 'host1:5432,host2:6432'}`
 
 在 connect 函数中，会遍历去进行连接，直到找到主库的连接后停止遍历返回连接。
 
@@ -79,11 +81,11 @@ openGauss 在2020年6月30日开放源代码，代码托管在 gitee 上。
 pip install py-opengauss==1.3.6
 ```
 
-## SQLAlchemy 定制 
+## SQLAlchemy 定制
 
 接下来是第二个问题，需要增强 SQLAlchemy 支持 py-opengauss 驱动。
 
-> 定制后的代码地址：https://github.com/vimiix/sqlalchemy
+> 定制后的代码地址：<https://github.com/vimiix/sqlalchemy>
 
 我 fork 了一份 SQLAlchemy 的代码，在现有的代码上，在 `lib/sqlalchemy/dialects/postgresql` 中新增 pyopengauss 的模块，在内部 dbapi 接口处返回我们的驱动即可：
 
@@ -145,7 +147,7 @@ cd py-opengauss
 python3 setup.py install
 ```
 
-2. 安装定制后的 SQLAlchemy 
+2. 安装定制后的 SQLAlchemy
 
 ```bash
 git clone https://github.com/vimiix/sqlalchemy
@@ -159,4 +161,3 @@ python3 setup.py install
 from sqlalchemy import create_engine
 engine = create_engine('postgresql+pyopengauss://user:password@host1:port1,host2:port2/db')
 ```
-

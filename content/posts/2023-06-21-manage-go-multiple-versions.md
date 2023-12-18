@@ -21,6 +21,8 @@ tags:
 - 简单：shell 函数实现，直接集成到 bashrc 或 zshrc 中即可使用，无需额外配置
 - 可定制化：代码简单可根据自身需求定制
 
+<!--more-->
+
 ## 代码实现
 
 gist地址：[https://gist.github.com/vimiix/0927fdfbea926e869a2c631db9eeae8b](https://gist.github.com/vimiix/0927fdfbea926e869a2c631db9eeae8b)

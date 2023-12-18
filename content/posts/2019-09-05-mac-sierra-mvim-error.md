@@ -16,6 +16,8 @@ dyld: Library not loaded: /System/Library/Frameworks/Ruby.framework/Versions/2.0
 [1]    33114 abort      mvim -v
 ```
 
+<!--more-->
+
 ### 解决方法
 
 这个错误是 [macvim](https://github.com/macvim-dev/macvim) 报的错，并非 [vim](https://www.vim.org/).

@@ -15,7 +15,7 @@ ImportError: Python is not installed as a framework. balabala....
 
 当然这个问题很好解决，网上有一搜就会找到如下两种解决方案：
 
-#### 第一种方案是在系统中设置：
+#### 第一种方案是在系统中设置
 
 - 假设你已经通过`pip install matplotlib`安装了 matplotlib，那么在你的根目录中会有一个名为`〜/ .matplotlib`的目录。
 - 在这个目录中创建一个`matplotlibrc`的文件 ,在里面添加一行代码：`backend: TkAgg`，保存退出即可。
@@ -24,7 +24,9 @@ ImportError: Python is not installed as a framework. balabala....
 
 这种方式可以设定整个系统的 matplotlib 渲染使用的引擎，但是不好的是，代码会变得不可移植，如果服务器很多，我们需要每一台机器都去设置这个参数，这时候就需要使用第二种方案。
 
-#### 第二种方案是在代码中设置：
+<!--more-->
+
+#### 第二种方案是在代码中设置
 
 在引用`matplotlib`库的代码之前，添加如下两行代码（确认安装 TkInter）：
 
@@ -34,8 +36,6 @@ matplotlib.use('TkAgg')
 ```
 
 这样也可以临时的修改前面提到的 `backend`变量。
-
-<!--more-->
 
 ### 为什么要这样做？
 
@@ -129,8 +129,8 @@ matplotlib.use('PS')   # 默认输出 postscript
 
 ### 参考链接
 
-- https://stackoverflow.com/questions/21784641/installation-issue-with-matplotlib-python
-- https://matplotlib.org/faq/usage_faq.html#what-is-a-backend
-- https://matplotlib.org/users/customizing.html#customizing-matplotlib
+- <https://stackoverflow.com/questions/21784641/installation-issue-with-matplotlib-python>
+- <https://matplotlib.org/faq/usage_faq.html#what-is-a-backend>
+- <https://matplotlib.org/users/customizing.html#customizing-matplotlib>
 
 --- EOF ---

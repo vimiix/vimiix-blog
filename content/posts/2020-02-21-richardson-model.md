@@ -5,7 +5,7 @@ categories: 'translation'
 tags: ['translation', 'Richardson']
 ---
 
-> 原文链接：https://martinfowler.com/articles/richardsonMaturityModel.html
+> 原文链接：<https://martinfowler.com/articles/richardsonMaturityModel.html>
 
 ### 迈向 REST 的荣耀之巅
 
@@ -14,6 +14,8 @@ Leonard Richardson 提出的一个模型，将实现 REST 方法的主要元素�
 在[Rest In Practice](https://www.amazon.cn/dp/0596805829/ref=sr_1_1?ie=UTF8&qid=1551228104&sr=8-1&keywords=REST+in+Practice)一书中，解释了如何使用 Restful Web Service 来处理企业面临的许多集成问题。本书的核心观点是，Web 就是一个大规模可扩展的分布式系统存在、并可以很好的工作的证明，而我们可以根据这一观点更容易地构建集成系统。
 
 ![](https://static.vimiix.com/uPic/2021-04-06/5hdvom.png)
+
+<!--more-->
 
 为了说明一个“Web 风格”系统的特定属性，作者使用了由 Leonard Richardson 提出的“RESTful 成熟度模型”，该模型在一次[QCon Talk](http://www.crummy.com/writing/speaking/2008-QCon/act3.html)中被谈到。通过这一模型，可以很好的思考如果使用 REST，所以我也会尝试添加一些自己的解释。（本文中所使用协议示例只是为了更好的说明，并不建议在实际生产中编码实现或测试，因为其在细节上可能会存在问题）
 

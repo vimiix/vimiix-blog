@@ -12,6 +12,8 @@ Beanstalk 的应用场景主要有：
 - 消息异步处理（消息队列的基本需求）
 - 消息延迟处理，实现循环队列
 
+<!--more-->
+
 ### beanstalkd 核心组件
 
 - `job` : 任务，队列中的基本单元
@@ -73,5 +75,5 @@ consumer 获取（reserve）了一个 READY 的 job 后，该 job 的状态就�
 ### 一些链接
 
 - beanstalkd 源码地址： [https://github.com/beanstalkd/beanstalkd](https://github.com/beanstalkd/beanstalkd)
-- 各编程语言客户端列表：https://github.com/beanstalkd/beanstalkd/wiki/Client-Libraries
-- beanstalkd 中文协议：https://github.com/beanstalkd/beanstalkd/blob/master/doc/protocol.zh-CN.md
+- 各编程语言客户端列表：<https://github.com/beanstalkd/beanstalkd/wiki/Client-Libraries>
+- beanstalkd 中文协议：<https://github.com/beanstalkd/beanstalkd/blob/master/doc/protocol.zh-CN.md>

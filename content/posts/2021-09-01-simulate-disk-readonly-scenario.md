@@ -26,6 +26,8 @@ umount: /opt: target is busy.
 
 遇到该错误时，可以通过`lsof [mountpoint]`  命令来查看有哪些进程依赖这块盘，kill 掉相应的进程后重新卸载。
 
+<!--more-->
+
 ### 2. 配置伪设备来镜像 /dev/vdb1 的内容
 
 卸载成功后，我们通过 `losetup` 指令来配置一个loop设备（*在类 UNIX 系统里，loop 设备是一种伪设备(pseudo-device)，或者也可以说是仿真设备。它能使我们像块设备一样访问一个文件*）。
@@ -93,6 +95,5 @@ d. 将 `/dev/vdb1` 重新挂载回来
 ```bash
 mount /dev/vdb1 /opt
 ```
-
 
 --- EOF ---

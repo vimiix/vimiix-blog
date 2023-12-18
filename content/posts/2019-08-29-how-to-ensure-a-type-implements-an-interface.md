@@ -19,6 +19,8 @@ if value, ok := AType.(BInterface) {
 
 如果断言失败，那么 ok 的值将会是 false,但是如果断言成功 ok 的值将会是 true,同时 value 将会得到所期待的正确的值。
 
+<!--more-->
+
 但是，在某些情况下，我们可能希望明确地检查接口中哪些方法没有被实现。最好的方法就是借助编译器地检查功能。
 
 假设定义了一个 `Programmer` 接口，一个 `Human` 类型：
@@ -60,7 +62,7 @@ func main() {}
 
 ```bash
 ./prog.go:10:5: cannot use (*Human)(nil) (type *Human) as type Programmer in assignment:
-	*Human does not implement Programmer (missing Code method)
+ *Human does not implement Programmer (missing Code method)
 ```
 
 这个时候，编译器很友好地将我们在 `Human` 类型中缺少地方法显示了出来。避免上线后出问题。其实，如果是在 Goland 类似有实时提示的 IDE 中开发的话，当这段代码被写完的时候，开发环境就会实时检测出来，甚至都不需要自己编译：

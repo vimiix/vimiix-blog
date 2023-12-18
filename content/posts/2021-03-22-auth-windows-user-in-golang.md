@@ -11,6 +11,8 @@ tags: ['note', 'windows', 'golang']
 
 用一个示例代码来进行说明，下面是目录结构中，`main.go` 是程序入口文件，auth 包中，我们仅实现 windows 系统的校验代码，其他平台不属于本文介绍内容，就直接返回 nil 即可。
 
+<!--more-->
+
 #### 目录结构
 
 ```bash
@@ -110,23 +112,23 @@ func logon(username string, domain string, password string) (syscall.Token, erro
 
 func logonUserW(username *uint16, domain *uint16, password *uint16, logonType uint32,
     logonProvider uint32, outToken *syscall.Token) error {
-	ret, _, err := syscall.Syscall6(
-		procLogonUserW.Addr(),
-		6,
-		uintptr(unsafe.Pointer(username)),
-		uintptr(unsafe.Pointer(domain)),
-		uintptr(unsafe.Pointer(password)),
-		uintptr(logonType),
-		uintptr(logonProvider),
-		uintptr(unsafe.Pointer(outToken)),
-	)
-	if ret == 0 {
-		if err == 0 {
-			err = syscall.EINVAL
-		}
-		return err
-	}
-	return nil
+ ret, _, err := syscall.Syscall6(
+  procLogonUserW.Addr(),
+  6,
+  uintptr(unsafe.Pointer(username)),
+  uintptr(unsafe.Pointer(domain)),
+  uintptr(unsafe.Pointer(password)),
+  uintptr(logonType),
+  uintptr(logonProvider),
+  uintptr(unsafe.Pointer(outToken)),
+ )
+ if ret == 0 {
+  if err == 0 {
+   err = syscall.EINVAL
+  }
+  return err
+ }
+ return nil
 }
 
 ```
@@ -155,14 +157,14 @@ GOOS=windows GOARCH=amd64 go build -o auth.exe main.go
 
 #### golang 相关的库
 
-- https://github.com/golang/sys/blob/77190671981848ff71219ecfff38636c9add3b79/windows/dll_windows.go
-- https://github.com/itchio/ox
-- https://github.com/lxn/win
-- https://github.com/JamesHovious/w32
+- <https://github.com/golang/sys/blob/77190671981848ff71219ecfff38636c9add3b79/windows/dll_windows.go>
+- <https://github.com/itchio/ox>
+- <https://github.com/lxn/win>
+- <https://github.com/JamesHovious/w32>
 
 #### 参考链接
 
-- https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-logonuserw
+- <https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-logonuserw>
 
-- https://knowledgebase.progress.com/articles/Article/P21685
-- https://bbs.csdn.net/topics/360202554
+- <https://knowledgebase.progress.com/articles/Article/P21685>
+- <https://bbs.csdn.net/topics/360202554>

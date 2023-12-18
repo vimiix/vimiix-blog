@@ -19,6 +19,8 @@ C#、Lua、Python 的用户可能会发现 Go 的 goroutine 和协程之间有�
 
 一般来说，goroutine 比协程更强大。而且，我们可以很容易地将协程的逻辑移植到 goroutine 来获得更好的并行效果。
 
+<!--more-->
+
 ## Generators
 
 在 python 中，要实现一个生成器，需要通过 `yield` 生成数据，通过 `next` 获取数据：
