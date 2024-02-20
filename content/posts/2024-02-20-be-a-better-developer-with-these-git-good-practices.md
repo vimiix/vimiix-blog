@@ -10,6 +10,8 @@ tags:
 
 如果你是一名开发人员，你可能每天都会使用 git 作为版本控制系统。这个工具的使用对于应用程序的开发过程是至关重要的，无论是在团队协作还是单独工作。但是，常常会遇到混乱的项目库，提交的 commit 信息不明确，不能传达有用的内容，以及滥用分支等问题。了解如何正确使用 git 并遵循良好的实践对于那些想要在就业市场中脱颖而出的人来说是必不可少的。
 
+<!--more-->
+
 ## Git 分支的命名约定
 
 当我们在处理代码版本控制时，我们应该遵循的一个好的习惯，就是为分支、提交、拉取请求等使用**清晰**和**描述性**的名称。确保所有团队成员都有一个简洁的工作流程是至关重要的。除了提高工作效率之外，记录项目的开发过程也简化了团队合作。通过遵循这些实践，你很快就会获益其中。
@@ -178,4 +180,6 @@ Refs: #345
 - <https://se-education.org/guides/conventions/git.html>
 - <https://cbea.ms/git-commit/> <https://blog.geekhunter.com.br/o-que-e-commit-e-como-usar-commits-semanticos/>
 
-> 翻译自：<https://dev.to/anthonyvii/be-a-better-developer-with-these-git-good-practices-2dim>
+---
+
+*翻译自：<https://dev.to/anthonyvii/be-a-better-developer-with-these-git-good-practices-2dim>*
