@@ -9,7 +9,7 @@ buildFuture = true
 [params]
     authorName = "Vimiix Yao"
     githubUser = "vimiix"
-    subtitle = "Practice makes perfect (ง •̀_•́)ง"
+    subtitle = "Get hands dirty (ง •̀_•́)ง"
     dateFmt = "2006.01.02 15:04"
     keywords = [ "Technology", "Code", "Program", "Python", "Golang" ]
     description = "A blog maintained by Vimiix."
