@@ -23,6 +23,10 @@
 	{{ printf `
 	<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{- end }}
+	<noscript>
+    <img src="https://shynet.vimiix.com/ingress/7c85700e-0592-42ce-82b8-24bc42798b16/pixel.gif">
+	</noscript>
+	<script defer src="https://shynet.vimiix.com/ingress/7c85700e-0592-42ce-82b8-24bc42798b16/script.js"></script>
 </head>
 
 <body>
