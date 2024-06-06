@@ -7,20 +7,21 @@ Hi，欢迎到访我的网站，下面是一些关于我和这个网站的一些
 
 ## 关于我
 
-目前在 [云和恩墨](https://enmotech.com/) 从事数据库相关的产品后端研发工作，主要使用的开发语言是: Python 和 Golang
+2014 年毕业后经历过三年职业探索期，做过嵌入式、产品运营，于 2017 年定居软件开发领域。目前在 [云和恩墨](https://enmotech.com/) 从事数据库相关的产品后端研发工作，主力开发语言是 Go、Python、Bash，目前业余时间在学习 Rust 中，用过的其它有 C、HTML/CSS/JS、lua、Tcl 等。主要技术栈包含但不限于 Web 后端、Linux 运维、容器、数据库、微服务等。
 
 受雇过的公司：
 
-- 2021~至今 [西安][云和恩墨](https://enmotech.com)
-- 2018~2020 [北京][豆瓣](https://www.douban.com)
-- 2017~2018 [北京][云和恩墨](https://enmotech.com)
-- 2016~2017 [北京][CSDN](https://www.csdn.net)
-- 2015~2017 [上海][JUMA.IO](https://github.com/JUMA-IO)
+- 2021~now  [西安] [云和恩墨](https://enmotech.com)
+- 2018~2020 [北京] [豆瓣](https://www.douban.com)
+- 2017~2018 [北京] [云和恩墨](https://enmotech.com)
+- 2016~2017 [北京] [CSDN](https://www.csdn.net)
+- 2015~2017 [上海] [JUMA.IO](https://github.com/JUMA-IO)
 
 ## 联系方式
 
-- Github：[vimiix](http://github.com/vimiix)
-- Douban：[Vimiix~Y](https://www.douban.com/people/vimiix/)
+- Github：[https://github.com/vimiix](https://github.com/vimiix)
+- Douban：[https://www.douban.com/people/vimiix](https://www.douban.com/people/vimiix/)
+- Linkin: [https://www.linkedin.com/in/vimiix](https://www.linkedin.com/in/vimiix/)
 - Email：[i@vimiix.com](mailto:i@vimiix.com)
 
 ## 关于本站
