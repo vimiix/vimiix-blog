@@ -2,8 +2,10 @@ baseURL = "https://www.vimiix.com/"
 languageCode = "cn-zh"
 title = "Hi, I'm Vimiix"
 theme = "smol"
-copyright = "Copyright (c) 2017-2024, Vimiix Yao; All rights reserved"
+copyright = "Vimiix Yao; All rights reserved"
 buildFuture = true
+paginate = 20
+enableRobotsTXT = true
 
 # Parameters
 [params]
@@ -11,7 +13,7 @@ authorName = "Vimiix Yao"
 githubUser = "vimiix"
 subtitle = "Get hands dirty."
 dateFmt = "2006.01.02 15:04"
-keywords = ["Technology", "Code", "Program", "Python", "Golang"]
+keywords = ["Technology", "Code", "Program", "Python", "Golang", "vimiix"]
 description = "A blog maintained by Vimiix."
 
 # Header
@@ -21,11 +23,11 @@ identifier = "posts"
 name = "文章列表"
 url = "/posts/"
 weight = 1
-[[menu.main]]
-identifier = "categories"
-name = "分类"
-url = "/categories/"
-weight = 2
+# [[menu.main]]
+# identifier = "categories"
+# name = "分类"
+# url = "/categories/"
+# weight = 2
 [[menu.main]]
 identifier = "tags"
 name = "标签"
@@ -38,7 +40,7 @@ url = "/friends/"
 weight = "4"
 [[menu.main]]
 identifier = "about"
-name = "关于"
+name = "关于我"
 url = "/about/"
 weight = "5"
 [[menu.main]]
@@ -48,9 +50,9 @@ url = "/index.xml"
 weight = "6"
 [[menu.main]]
 identifier = "ssx"
-name = "SSX"
-url = "https://ssx.vimiix.com"
-weight = "6"
+name = "实践"
+url = "/projects/"
+weight = "3"
 
 # Footer
 [[menu.footer]]

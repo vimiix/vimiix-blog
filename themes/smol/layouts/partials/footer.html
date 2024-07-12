@@ -1,10 +1,12 @@
 <footer>
 	<p>
+		Social Links:
 		{{- range .Site.Menus.footer }}
 		<a href="{{ .URL }}"><b>{{ .Name }}</b></a>.
 		{{- end }}
 		<br>
-		&copy; {{ now.Year }}
+		<hr>
+		&copy; 2017-{{ now.Year }}
 		{{ if .Site.Copyright }}{{ .Site.Copyright }}.
 		{{ else }}{{ .Site.Title }}{{ end }}
 		<a href="https://beian.miit.gov.cn/">京ICP备19015214号-1</a>

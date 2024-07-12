@@ -15,7 +15,7 @@ tags: [pymsql, Inception, Python]
 
 ## Pymysql 在链接 inception 在判断版本时出现 value error
 
-### 原因：
+### 原因
 
 pymysql 通过`.`进行分割，但是 Inception 的版本信息是这样的
 
@@ -27,7 +27,7 @@ pymysql 通过`.`进行分割，但是 Inception 的版本信息是这样的
 
 因此 Pymysql 获取到的版本值为 Inception2，所以在内部强制类型转换`int()`的时候报 value error。
 
-### 解决方法（修改 pymysql 源码）：
+### 解决方法（修改 pymysql 源码）
 
 修改 Pymysql 文件夹内的 connections.py
 
@@ -58,11 +58,11 @@ pymysql 通过`.`进行分割，但是 Inception 的版本信息是这样的
 >
 > 如果是语法问题，请先自行检查语法。
 
-### 原因：
+### 原因
 
 pymysql 模块会自动向 inception 发送 SHOW WARNINGS 语句，而恰好这个 warnings 被 inception 捕捉到了，从而导致 inception 返回一个"Must start as begin statement"错误被 archer 捕捉到报在日志里.
 
-### 解决方法：
+### 解决方法
 
 很遗憾，目前的方法我依然是修改 pymsql 的源码，请修改`pymysql/cursors.py:338行`，将`self._show_warnings()`这一句注释掉，换成 pass，如下：
 
@@ -70,13 +70,13 @@ pymysql 模块会自动向 inception 发送 SHOW WARNINGS 语句，而恰好这�
 
 依旧，这个方法有副作用，会导致所有调用该 pymysql 模块的程序不能 show warnings，
 
-##### 这个问题的解决方法：
+##### 这个问题的解决方法
 
 > 推荐使用 virtualenv 或 venv 创建一个独立的 python 运行环境来管理包
 
 ## 执行时，出现 Commands out of sync 的错误
 
-### 原因：
+### 原因
 
 这个原因出现在应用层的话，检查在`fetch all`前面是否有`commit`，去掉之后，问题就解决了。
 
