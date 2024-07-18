@@ -8,6 +8,11 @@ title: '实践'
 - 文档：[https://ssx.vimiix.com](https://ssx.vimiix.com)
 - 介绍：SSX 是一个命令行 SSH 客户端，首次登录后自动存储密码，后续无需输入密码可以直接通过ID或标签或搜索登录。
 
+## django-opengauss-backend - 适用于 openGauss 数据库的 Django 方言
+
+- 代码：[https://github.com/vimiix/django-opengauss-backend](https://github.com/vimiix/django-opengauss-backend)
+- 介绍：Django 中如果想使用 openGauss 作为后端，直接使用pg的方言会存在不兼容的SQL问题，所以我编写了这个项目，适配了 Django 2.2~5.0 的版本，需要搭配 openGauss 的 psycopg2 驱动一起使用。
+
 ## gsql - 🔨 基于容器的 openGauss 数据库客户端(工具集)
 
 - 代码：[https://github.com/vimiix/gsql](https://github.com/vimiix/gsql)
