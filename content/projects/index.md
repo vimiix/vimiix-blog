@@ -11,7 +11,7 @@ title: '开源项目'
 ## ali-db-monthly - 🎭 阿里数据库内核月报 Wrapper
 
 - 代码：[https://github.com/vimiix/ali-db-monthly](https://github.com/vimiix/ali-db-monthly)
-- 文档：[https://alidbmonthly.vimiix.com](https://alidbmonthly.vimiix.com)
+- 网站：[https://alidbmonthly.vimiix.com](https://alidbmonthly.vimiix.com)
 - 介绍：阿里数据库内核月报 Wrapper，支持根据时间和数据库类型过滤查看文章。
 
 ## django-opengauss-backend - 适用于 openGauss 数据库的 Django 方言
