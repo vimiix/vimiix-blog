@@ -1,5 +1,5 @@
 ---
-title: '实践'
+title: '开源项目'
 ---
 
 ## ssx - 🦅 轻量级标签化的 SSH 客户端
@@ -7,6 +7,12 @@ title: '实践'
 - 代码：[https://github.com/vimiix/ssx](https://github.com/vimiix/ssx)
 - 文档：[https://ssx.vimiix.com](https://ssx.vimiix.com)
 - 介绍：SSX 是一个命令行 SSH 客户端，首次登录后自动存储密码，后续无需输入密码可以直接通过ID或标签或搜索登录。
+
+## ali-db-monthly - 🎭 阿里数据库内核月报 Wrapper
+
+- 代码：[https://github.com/vimiix/ali-db-monthly](https://github.com/vimiix/ali-db-monthly)
+- 文档：[https://alidbmonthly.vimiix.com](https://alidbmonthly.vimiix.com)
+- 介绍：阿里数据库内核月报 Wrapper，支持根据时间和数据库类型过滤查看文章。
 
 ## django-opengauss-backend - 适用于 openGauss 数据库的 Django 方言
 

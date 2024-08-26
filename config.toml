@@ -50,7 +50,7 @@ url = "/index.xml"
 weight = "6"
 [[menu.main]]
 identifier = "ssx"
-name = "实践"
+name = "开源项目"
 url = "/projects/"
 weight = "3"
 
