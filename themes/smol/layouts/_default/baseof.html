@@ -23,10 +23,15 @@
 	{{ printf `
 	<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{- end }}
-	<noscript>
-    <img src="https://shynet.vimiix.com/ingress/7c85700e-0592-42ce-82b8-24bc42798b16/pixel.gif">
-	</noscript>
-	<script defer src="https://shynet.vimiix.com/ingress/7c85700e-0592-42ce-82b8-24bc42798b16/script.js"></script>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?7c24231917964240bae97e813810620c";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
 </head>
 
 <body>
