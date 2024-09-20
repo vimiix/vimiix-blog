@@ -55,11 +55,11 @@ import psycopg2 as pg
 
 #### INSERT耗时对比图
 
-![batch-insert](https://oss-emcsprod-public.modb.pro/image/editor/20230712-5709755a-dafa-4096-858c-7301e5160cd2.jpg)
+![batch-insert](https://static.vimiix.com/upic/2024-09-20/p0A6g8.png)
 
 #### INSERT 去除 executemany 对比
 
-![batch-insert-exclude-executemany](https://oss-emcsprod-public.modb.pro/image/editor/20230712-fa992e73-e08f-4e7e-8be3-79ea905a339e.jpg)
+![batch-insert-exclude-executemany](https://static.vimiix.com/upic/2024-09-20/naIaPn.png)
 
 ### UPDATE
 
@@ -73,7 +73,7 @@ import psycopg2 as pg
 
 #### UPDATE 耗时对比图
 
-![16892490588494.jpg](https://oss-emcsprod-public.modb.pro/image/editor/20230713-75ea074d-253a-4f82-a94c-eeb3e2280727.jpg)
+![16892490588494.jpg](https://static.vimiix.com/upic/2024-09-20/Nmf5Lh.png)
 
 ### DELETE
 
@@ -88,7 +88,7 @@ import psycopg2 as pg
 
 #### DELETE 耗时对比图
 
-![16892491996399.jpg](https://oss-emcsprod-public.modb.pro/image/editor/20230713-f2675fd6-8e22-4b0b-b08b-564932a60d60.jpg)
+![16892491996399.jpg](https://static.vimiix.com/upic/2024-09-20/oHjdjO.png)
 
 ## 性能分析
 
@@ -112,26 +112,26 @@ import psycopg2 as pg
 
 `executemany` 提交SQL的时候是逐个应用给的参数，每个SQL都单独发送给服务端
 
-![fd9636479f4c.jpg](https://oss-emcsprod-public.modb.pro/image/editor/20230712-1b04e125-3c1f-42bf-8760-fd9636479f4c.jpg)
+![fd9636479f4c.jpg](https://static.vimiix.com/upic/2024-09-20/qA6EA5.png)
 
 ### execute_batch
 
 `execute_batch` 接口区别于 `executemany` 的是，在发送给后端的单个请求包里的数据会一次性提交一批的SQL，这样可以减少和服务器之间通信的往返次数
 
-![54901fdb310d.jpg](https://oss-emcsprod-public.modb.pro/image/editor/20230712-52a6a6c0-4fcb-494e-84ea-54901fdb310d.jpg)
+![54901fdb310d.jpg](https://static.vimiix.com/upic/2024-09-20/w0ZLEa.png)
 
 ### prepare+execute_batch
 
 `prepare` 可以提前在数据库里面创建一个预备语句对象，在执行 prepare 语句的时候，指定的SQL已经经了解析、分析、重写，这样在后续执行 EXECUTE 时就避免了重复解析分析的工作，从而起到优化性能的作用。
 
-![8d8abc70246d.jpg](https://oss-emcsprod-public.modb.pro/image/editor/20230712-efca89b2-a99f-4c4e-8fce-8d8abc70246d.jpg)
+![8d8abc70246d.jpg](https://static.vimiix.com/upic/2024-09-20/61XBDU.png)
 
 ### execute_values
 
 前面的三个接口，不管是单个提交还是批量提交，最终都是一行数据一个SQL发送到服务端的，所以服务端需要逐个执行，而 `execute_values` 接口是会按照 page_size 分组参数后，每组参数一次性组成一个SQL进行提交。
 
-![b7d1-8031d10e389c.jpg](https://oss-emcsprod-public.modb.pro/image/editor/20230712-8fc8095f-6a20-4c01-b7d1-8031d10e389c.jpg)
-![b7d1-8031d10e389c.jpg](https://oss-emcsprod-public.modb.pro/image/editor/20230712-8fc8095f-6a20-4c01-b7d1-8031d10e389c.jpg)
+![b7d1-8031d10e389c.jpg](https://static.vimiix.com/upic/2024-09-20/pXWVrW.png)
+![b7d1-8031d10e389c.jpg](https://static.vimiix.com/upic/2024-09-20/0lQpxV.png)
 
 ## 测试代码
 

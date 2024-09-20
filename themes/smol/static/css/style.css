@@ -7,3 +7,25 @@ article{padding:24px 0}
 img {display: block; max-width: 100%; height: auto;}
 figcaption {color: #888; font: 12px/1.5 monospace; text-align: center;}
 figure {margin: auto}
+blockquote {border-radius: 4px; background: rgba(43, 42, 41, 0.15); border-left: 5px solid #21201f; font-size: 90%; margin-inline-start: 0; padding: 1em;}
+table {
+  border-collapse: collapse;
+  text-align: center;
+}
+table td, table th {
+  border: 1px solid #b6bec8;
+  color: #666;
+  line-height:30px;
+  padding: auto;
+}
+table thead th {
+  background-color: #393c3e;
+  color: white;
+}
+table tr:nth-child(odd) {
+  background: #fff;
+}
+
+table tr:nth-child(even) {
+  background: #F5FAFA;
+}

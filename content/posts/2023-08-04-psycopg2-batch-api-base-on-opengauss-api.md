@@ -1,5 +1,5 @@
 ---
-title: 'psycopg2 基于 openGauss libpq 中 execPramasBatch 和 execPreparedBatch 接口批量操作性能测试'
+title: 'psycopg2基于openGauss中execPramasBatch和execPreparedBatch接口测试'
 date: 2023-08-04 21:50:48
 categories: 'python'
 tags:
@@ -39,7 +39,7 @@ tags:
 | 50,000  |   10842   |    1801     |   707     |
 | 100,000 |   21445  |    3625     |    1257     |
 
-![image.png](https://oss-emcsprod-public.modb.pro/image/editor/20230804-516c5469-88d8-49a9-aa26-f2f9f1ec1613.png)![](media/16911146554324/16911308769356.jpg)
+![image.png](https://static.vimiix.com/upic/2024-09-20/iNwbLv.png)
 
 ### execute_params_batch
 
@@ -49,7 +49,7 @@ tags:
 | 50,000  |   11574   |    2591     |   1539     |
 | 100,000 |   22552  |     5511    |    2980     |
 
-![image.png](https://oss-emcsprod-public.modb.pro/image/editor/20230804-fd681e08-7363-4db5-8e1d-754b8bdfb3da.png)![](media/16911146554324/16911308253116.jpg)
+![image.png](https://static.vimiix.com/upic/2024-09-20/748CoC.png)
 
 ### execute_prepared_batch
 
@@ -59,12 +59,12 @@ tags:
 | 50,000  |  11307           |   2836      |  1480      |
 | 100,000 |  22976           |   5920      |  3425       |
 
-![image.png](https://oss-emcsprod-public.modb.pro/image/editor/20230804-518f41ab-9c6c-4e57-9d94-f98ae68ba36d.png)
+![image.png](https://static.vimiix.com/upic/2024-09-20/yeQRc8.png)
 
 ### 相同行数时，不同 page_size 的接口性能对比
 
-![image.png](https://oss-emcsprod-public.modb.pro/image/editor/20230804-02bacd93-c5a3-4ec4-a954-89d4f03fe802.png)
-![image.png](https://oss-emcsprod-public.modb.pro/image/editor/20230804-9f236784-0b64-477b-8f70-ac8b79747c70.png)
+![image.png](https://static.vimiix.com/upic/2024-09-20/OQynhS.png)
+![image.png](https://static.vimiix.com/upic/2024-09-20/PXguIq.png)
 
 ## 更新 UPDATE
 
@@ -78,7 +78,7 @@ tags:
 | 50,000  |   15367   |    3429     |   2601     |
 | 100,000 |   25882  |    11313     |    5356     |
 
-![image.png](https://oss-emcsprod-public.modb.pro/image/editor/20230804-213bda25-3da2-4b23-abba-e67879979e27.png)
+![image.png](https://static.vimiix.com/upic/2024-09-20/roeISI.png)
 
 ### execute_params_batch
 
@@ -88,7 +88,7 @@ tags:
 | 50,000  |   13359   |    4478     |   3026     |
 | 100,000 |   28432  |     8529    |    5923     |
 
-![image.png](https://oss-emcsprod-public.modb.pro/image/editor/20230804-f4e32c61-474f-4aa1-b6b2-fda119fb873d.png)
+![image.png](https://static.vimiix.com/upic/2024-09-20/iPGUHF.png)
 
 ### execute_prepared_batch
 
@@ -98,12 +98,12 @@ tags:
 | 50,000  |  12860           |   6153      |  3626      |
 | 100,000 |  28445           |   10103      |  10828       |
 
-![image.png](https://oss-emcsprod-public.modb.pro/image/editor/20230804-cf3056f0-470e-498d-8726-8b299722076f.png)
+![image.png](https://static.vimiix.com/upic/2024-09-20/c64pUD.png)
 
 ## 相同行数时，不同 page_size 的接口性能对比
 
-![image.png](https://oss-emcsprod-public.modb.pro/image/editor/20230804-1b57b5fe-da83-41de-b6be-e567d7a401dd.png)
-![image.png](https://oss-emcsprod-public.modb.pro/image/editor/20230804-798f7b69-bf8b-409f-8060-18f29491a66d.png)
+![image.png](https://static.vimiix.com/upic/2024-09-20/pFengW.png)
+![image.png](https://static.vimiix.com/upic/2024-09-20/cWneQ2.png)
 
 ## 结论
 
