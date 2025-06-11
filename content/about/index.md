@@ -6,17 +6,11 @@ Hi，欢迎到访我的网站，下面是一些关于我和这个网站的一些
 
 ## 关于我
 
-早期做过蓝牙嵌入式开发和产品运营，于 2017 年开始专注软件开发。主力开发语言是 Go、Python、Shell，用过的其它有 C、HTML/CSS/JS、lua 等。涉猎的开发方向有 Web 后端、Linux 运维、容器化、数据库工具等。
+2014年本科毕业后从事蓝牙嵌入式开发相关工作，2017年开始转型专注后端开发。
 
-**受雇过的公司**：
+日常使用的开发语言是 Go、Python、Shell，偶尔使用 C/C++、HTML/CSS/JS、lua 等。
 
-| 时间           | 工作地 | 公司                                  | 技术栈                                                       |
-| -------------- | ------ | ------------------------------------- | ------------------------------------------------------------ |
-| 2020/7~2024/12 | 西安   | [云和恩墨](https://enmotech.com)      | Python、Golang、Docker(Compose)、GRPC、Shell、Postgresql、Jenkins |
-| 2018/7~2020/6  | 北京   | [豆瓣](https://www.douban.com)        | Python、DAE、Flask、Thrift、Golang、Redis、Prometheus、Grafana |
-| 2017/9~2018/6  | 北京   | [云和恩墨](https://enmotech.com)      | Python、Flask、Celery、MySQL、Shell、Redis                   |
-| 2016/7~2017/9  | 北京   | [CSDN](https://www.csdn.net)          | Python、Django                                               |
-| 2015/2~2016/6  | 上海   | [JUMA.IO](https://github.com/JUMA-IO) | C、Bluetooth、Bootstrap、HTML、JS                            |
+工作经验有 Web 后端、Linux 运维、容器化、数据库工具开发等。
 
 ## 联系方式
 
