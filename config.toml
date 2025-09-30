@@ -4,8 +4,9 @@ title = "Hi, I'm Vimiix"
 theme = "smol"
 copyright = "Vimiix Yao; All rights reserved"
 buildFuture = true
-paginate = 20
+pagination.pagerSize = 20
 enableRobotsTXT = true
+ignoreLogs = ['warning-goldmark-raw-html']
 
 # Parameters
 [params]
