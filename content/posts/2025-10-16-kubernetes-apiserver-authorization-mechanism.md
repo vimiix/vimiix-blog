@@ -11,7 +11,7 @@ tags:
 
 ## 1. 引言
 
-在 Kubernetes 集群中，[认证（Authentication）](./2025-09-30-kubernetes-apiserver-authentication-mechanism.md)解决了“你是谁”的问题，而鉴权（Authorization）则解决了“你能做什么”的问题。鉴权是 Kubernetes 安全框架的核心支柱之一，它位于认证之后，用于确定一个已经通过身份认证的用户或服务账户（ServiceAccount）是否拥有对特定资源执行特定操作的权限。Kubernetes 采用了一种声明式的、基于属性的访问控制（ABAC）和基于角色的访问控制（RBAC）等模型来实现精细化的权限管理。本文将简单介绍 Kubernetes 的鉴权机制，包括其架构、工作流程、核心模型及详细实现原理。
+在 Kubernetes 集群中，[认证（Authentication）](./posts/2025-09-30-kubernetes-apiserver-authentication-mechanism)解决了“你是谁”的问题，而鉴权（Authorization）则解决了“你能做什么”的问题。鉴权是 Kubernetes 安全框架的核心支柱之一，它位于认证之后，用于确定一个已经通过身份认证的用户或服务账户（ServiceAccount）是否拥有对特定资源执行特定操作的权限。Kubernetes 采用了一种声明式的、基于属性的访问控制（ABAC）和基于角色的访问控制（RBAC）等模型来实现精细化的权限管理。本文将简单介绍 Kubernetes 的鉴权机制，包括其架构、工作流程、核心模型及详细实现原理。
 
 <!--more-->
 
